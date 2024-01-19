@@ -1,4 +1,3 @@
-
 @import "//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css";
 @import "//use.fontawesome.com/releases/v6.2.0/css/all.css";
 @font-face {
@@ -18,7 +17,11 @@
 @font-face {
    font-family:ProximaNova Bold;
    src: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/ProximaNova-Bold.woff2?v=1642988930") format("woff2");
- }
+ }/*
+@font-face {
+   font-family:Proxima-Nova;
+   src: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/ProximaNova-Bold.woff2?v=1642988930") format("woff2");
+ }*/
 @font-face {
    font-family:ProximaNova Semibold;
    src: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/ProximaNova-Semibold.woff2?v=1638841180") format("woff2");

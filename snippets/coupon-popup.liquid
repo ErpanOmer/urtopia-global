@@ -7,9 +7,11 @@
   </g>
 </svg>
   <div class="from-title">From <span></span></div>
-  <div class="congratulations">Congratulations!<br/>€700 discount is activated. Enjoy!</div>
+  <div class="congratulations">Congratulations!<br/>$600 discount is activated. Enjoy!</div>
   <div class="content">It will automatically apply to each Urtopia Carbon E-Bike when you check out in this section. Enjoy the ride with your friends. Copy the code to use it later.</div>      
-  <div class="copy-input"><div id="coupon-code"></div><button onclick="copyCouponCode()"><span>Copy</span>
+  <div class="copy-input">
+    <div id="coupon-code"></div>
+    <button onclick="copyCouponCode()"><span>Copy</span>
   <svg xmlns="http://www.w3.org/2000/svg" width="29" height="27" viewBox="0 0 29 27">
   <g id="Group_18592" data-name="Group 18592" transform="translate(-1777 -1085)">
     <g id="Rectangle_204" data-name="Rectangle 204" transform="translate(1777 1091)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
@@ -161,7 +163,6 @@
     dummy.select();
     document.execCommand("copy");
     document.body.removeChild(dummy);
-
   }
   function closePopup(){
     document.querySelector(".coupon-popup").classList.add("display-hidden");

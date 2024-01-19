@@ -1,0 +1,958 @@
+{{ 'pagefly-main.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'pagefly.9b29433f.css' | asset_url | stylesheet_tag: preload: true }}
+{{ 'chord-ebike.scss.css' | asset_url | stylesheet_tag: preload: true }}
+<link rel="preload" href="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/3_1_2x_c75e6ef5-a3ac-49af-bb2f-c19dd565cfad.jpg?v=1689154308" as="image">
+<link rel="preload" href="https://cdn.shopify.com/s/files/1/0633/2068/6808/files/chordXgreycollection.png?v=1696840938" as="image">
+<link rel="preload" href="https://cdn.shopify.com/s/files/1/0633/2068/6808/files/Group_20662.svg" as="image">
+
+<div class="top-fixed mobileHide">
+    <div class="centeral-content">
+        <span class="u20DemiBold_v2">{{all_products['urtopia-chord-ebike'].title}}</span>
+        <span class="flex-1"></span>
+        <div>
+            <span class="u17Light_v2"><span class="u20DemiBold_v2 emphasize"
+                    style="font-weight: 600;">{{ all_products['urtopia-chord-ebike'].price | minus: settings.chord_ebike_discount_price | money }}</span> <span
+                    style="text-decoration: line-through;">{{ all_products['urtopia-chord-ebike'].price | money }}</span></span>
+            <span class="u14Light_v2">or as low as {{ all_products['urtopia-chord-ebike'].price | minus: settings.chord_ebike_discount_price | divided_by: 24 | money_without_trailing_zeros }}/Month</span>
+        </div>
+        <a href="/products/urtopia-chord-ebike" target="_blank" class="my-button my-button-origin" action_type="Buynow_0">Order Now</a>
+    </div>
+</div>
+<div class="bottom-fixed pcHide">
+    <a href="/products/urtopia-chord-ebike" target="_blank" class="my-button my-button-origin" action_type="Buynow_0">Order Now</a>
+    <div>
+        <span>
+            <span class="u17DemiBold_v2 emphasize">{{ all_products['urtopia-chord-ebike'].price | minus: settings.chord_ebike_discount_price | money }}</span> 
+            <span class="u11Light_v2" style="text-decoration: line-through;">{{ all_products['urtopia-chord-ebike'].price | money }}</span>
+        </span>
+        <span class="u11Light_v2">or as low as {{ all_products['urtopia-chord-ebike'].price | minus: settings.chord_ebike_discount_price | divided_by: 24 | money_without_trailing_zeros }}/Month</span>
+    </div>
+</div>
+
+
+<div class="chord-ebike">
+    <div class="banner">
+        <div class="centeral-content">
+			{% unless settings.hide_sale_countdown %}
+                <div class="sale mobileHide">
+                    <div class="u17DemiBold_v2">{{ settings.chord_sale_name }} ends in:</div>
+                    <img src="http://i.countdownmail.com/2qa2op.gif">
+                </div>
+            {% endunless %}
+            <div class="u72DemiBold_v2">Urtopia Chord</div>
+            <div class="u24Light_v2">Experience elegance and efficiency in one ride</div>
+            <div class="flex-1 pcHide"></div>
+            <div class="buttons">
+                <a href="/products/urtopia-chord-ebike" class="my-button" action_type="Buynow_1">Order Now</a>
+                <div class="my-button my-button-ghost" onclick="showVideoDialog('https://www.youtube.com/embed/BzI6yGGH47o?autoplay=1&cc_load_policy=1')">Watch video</div>
+            </div>
+        </div>
+        <video muted playsinline autoplay loop
+            poster="https://cdn.shopify.com/s/files/1/0633/2068/6808/files/Mask_Group_18289.jpg?v=1678183108">
+            <source
+                src="https://player.vimeo.com/progressive_redirect/playback/804813270/rendition/1080p/file.mp4?loc=external&amp;signature=b4ef0be9fe17055f9e9af17495e1c3950e3237013d10121b24c64d9a7b84abae"
+                type="video/mp4">
+        </video>
+    </div>
+
+    <!--<img class="mobileHide" src="https://cdn.shopify.com/s/files/1/0633/2068/6808/files/Mask_Group_18804_2x_9126d841-37c0-417a-80d4-41c64ff3a345.png?v=1696834098" alt="">
+    <img class="pcHide" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Mask_Group_18828_2x_a81e9be0-806a-4a8e-b312-4de3068a9b37.png?v=1696836492" alt="">
+    <div class="artist">
+        <div class="centeral-content">
+            <div>
+                <div class="u42DemiBold_v2">Be Artist, <br>Be Innovator</div>
+                <div class="u20Medium_v2">Seamless fusion of art and tech</div>
+            </div>
+            <div>
+                <div class="boxs">
+                    <div>
+                        <div class="u48DemiBold_v2">75 <span class="u24Medium_v2">Miles</span>
+                            <div class="u20Light_v2">Range</div>
+                        </div>
+                        <div class="u48DemiBold_v2">4 x 8 <div class="u20Light_v2">Modes X Gears</div>
+                        </div>
+                        <div class="u48DemiBold_v2">0<span class="u24Medium_v2"> S delay</span>
+                            <div class="u20Light_v2">Torque Sensor</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="u20DemiBold_v2">Liquid<br>Forging</div>
+                        <div class="u20DemiBold_v2">Hydraulic<br>Disc Brake</div>
+                        <div class="u20DemiBold_v2">Removable<br>Battery</div>
+                    </div>
+                    <div>
+                        <div class="u20DemiBold_v2">Built-in<br>Navigation</div>
+                        <div class="u20DemiBold_v2">GPS<br>Anti-theft</div>
+                        <div class="u20DemiBold_v2">Real-Time<br>Tracking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bikes">
+        <div class="centeral-content">
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/1_1_2x_3f9f6132-5cac-4f49-bac7-ce6258edad1c.jpg?v=1689154301"
+                    alt="">
+                <div class="dots">
+                    <div variant-id="43694976663800"
+                        img-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/1_1_2x_3f9f6132-5cac-4f49-bac7-ce6258edad1c.jpg?v=1689154301"
+                        class="active" white></div>
+                    <div variant-id="43694976696568"
+                        img-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/3_1_2x_c75e6ef5-a3ac-49af-bb2f-c19dd565cfad.jpg?v=1689154308"
+                        black></div>
+                </div>
+                <div class="infos">
+                    <div>
+                        <div class="u36DemiBold_v2">Chord</div>
+                        <div class="u20Light_v2">Fit for 5’7’’~6’5’’</div>
+                    </div>
+                    <a class="my-button my-button-black"
+                        href="/products/urtopia-chord-ebike?variant=43705718997208" action_type="Buynow_2">Order now</a>
+                </div>
+            </div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/chordX_2x_fe86f1a1-6d47-4dd4-b1b9-80ee149da0fe.jpg?v=1689154670"
+                    alt="">
+                <div class="dots">
+                    <div variant-id="43694976729336"
+                        img-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/chordX_2x_fe86f1a1-6d47-4dd4-b1b9-80ee149da0fe.jpg?v=1689154670"
+                        white class="active"></div>
+                    <div variant-id="44047038447864"
+                        img-src="https://cdn.shopify.com/s/files/1/0633/2068/6808/files/chordXgreycollection.png?v=1696840938"
+                        gray></div>
+                </div>
+                <div class="infos">
+                    <div>
+                        <div class="u36DemiBold_v2">Chord X</div>
+                        <div class="u20Light_v2">Fit for 5’3’’~6’1’’</div>
+                    </div>
+                    <a class="my-button my-button-black"
+                        href="/products/urtopia-chord-ebike?variant=43705719062744" action_type="Buynow_2">Order now</a>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="smart">
+        <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Mask_Group_18288_1.webp" alt="">
+        <div class="centeral-content">
+            <div>
+                <div class="u36Medium_v2">Smart</div>
+                <div class="u72DemiBold_v2">Elevate<br>Your Ride</div>
+                <div class="u17Light_v2">Explore with a customized smart <br>partner—talk, navigate, and never lose
+                    <br>track of yourself.
+                </div>
+            </div>
+            <div>
+                <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/app1.png" alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/app1.png" alt="">
+            </div>
+        </div>
+        <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Rectangle_21490_1.webp" alt="">
+    </div>
+    <div class="maksim">
+        <div class="centeral-content">
+            <div>
+                <div class="u24Medium_v2">Maksim Mrvica</div>
+                <div class="u17Light_v2">World’s Fastest Pianist</div>
+            </div>
+            <div>
+                <div class="u30Medium_v2">Design</div>
+                <div class="u60DemiBold_v2">Inspired from<br>The Piano</div>
+                <div class="u17Light_v2">A passionate prodigy, and one of the world's fastest pianists, Mr. Mrvica
+                    inspired the design the philosophy of Chord, a crossover between art and tech.</div>
+            </div>
+        </div>
+    </div>
+    <div class="forging">
+        <div class="centeral-content">
+            <div>
+                <div>
+                    <div class="u36Medium_v2">Liquid Forging</div>
+                    <div class="u48DemiBold_v2">The Technology Of Aerospace</div>
+                </div>
+                <div class="u17Light_v2">
+                    The forging process creates a uniform and dense material that enhances strength, stiffness, ride quality, and aesthetics, offering a stronger, lighter, and more visually striking alternative to traditional frames.
+                </div>
+            </div>
+             <img class="mobileHide" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/cc_2x_c14062cc-7804-49f3-9673-63aaf97a638c.jpg?v=1696836035" alt="">
+            <img class="pcHide" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/cc_2x_3f56331e-6e89-417b-b189-4ce136ddb182.jpg?v=1696836750" alt="">
+        </div>
+    </div>
+    <div class="forging">
+        <div class="centeral-content">
+            <div>
+                <div>
+                    <div class="u48DemiBold_v2">It’s Your Canvas</div>
+                </div>
+                <div class="u17Light_v2">Customize your e-bike’s battery case with stickers or create your own
+                    design, giving it a personal touch. Unleash your inner artist and make it unique.</div>
+            </div>
+            <img class="mobileHide" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/chord_-1_2x_b27c97ca-aee8-4d98-a307-b0e13b44ab9a.jpg?v=1696836026" alt="">
+            <img class="pcHide" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/chord_-1_2x_d8f659f3-dea4-4d6b-9f37-04a2cf8db1a8.jpg?v=1696836756" alt="">
+        </div>
+    </div>
+    <div class="motion">
+        <div class="centeral-content u72DemiBold_v2">Elegance <br class="pcHide">in Motion</div>
+    </div>
+    <div class="ride">
+        <div class="centeral-content">
+            <div class="u72DemiBold_v2">Uphill Ride<br>Downhill Feel</div>
+        </div>
+    </div>
+    <div class="gears">
+        <div class="centeral-content">
+            <div class="u72DemiBold_v2">
+                4 x 8 <span class="u24Medium_v2">Levels</span>
+                <div class="u24Light_v2">Modes X Gears</div>
+            </div>
+            <div class="u17Light_v2">A wide range of gear options for riders of all skill levels and riding styles. Built to maintain a consistent and comfortable cadence on different terrains, the Chord delivers a superior riding experience.</div>
+        </div>
+    </div>
+    <div class="boxs">
+        <div class="centeral-content">
+            <div>
+                <div class="u42DemiBold_v2">Pure Comfort</div>
+                <div class="u17Light_v2">With its ergonomic design, you can enjoy your ride for longer periods without
+                    any discomfort or strain.</div>
+            </div>
+            <div></div>
+            <div></div>
+            <div>
+                <div class="u42DemiBold_v2">Effortless to Carry</div>
+                <div class="u17Light_v2">This e-bike is a breeze to carry, weighing only 46 lbs. Take it with you wherever you go, hassle-free.</div>
+            </div>
+            <div>
+                <div class="u42DemiBold_v2">Power Up with Ease and Waterproof</div>
+                <div class="u17Light_v2">Battery is easy to remove and re-install, and its location below the top tube
+                    keeps it waterproof. Enjoy peace of mind while riding, rain or shine.</div>
+            </div>
+            <div></div>
+        </div>
+    </div>
+    <div class="dark">
+        <div class="centeral-content">
+            <div>
+                <div></div>
+                <div>
+                    <div class="u42DemiBold_v2">Guardian in the Dark</div>
+                    <div class="u17Light_v2">The integrated headlight lights your way for a safer ride.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="animate_fullSection section11">
+        <div class="centerBox" style="width: 100%">
+            <div class="u72DemiBold_v2">Elegance Never Ends</div>
+        </div>
+        <div class="centerBox sandBox" style="width: 100%">
+            <div class="u72DemiBold_v2">Smart is the New Sexy</div>
+        </div>
+    </div>
+    <div class="section12 blackBg animate_fullSection mobileHide">
+        <div class="centerBox flexCol animate_fullContanier section12Container">
+            <div class="imgContainer">
+                <div class="imgItem bike4">
+                    <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/speak_animate.gif" alt="urtopia"
+                        class="ebike" />
+                </div>
+                <div class="imgItem bike3">
+                    <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/speak.jpg" alt="urtopia"
+                        class="ebike" />
+                </div>
+                <div class="imgItem bike2">
+                    <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/nav_animate.gif" alt="urtopia"
+                        class="ebike" />
+
+                </div>
+                <div class="imgItem bike1">
+                    <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/nav_cover.jpg" alt="urtopia"
+                        class="ebike" />
+                </div>
+                <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Rectangle_21274.webp"
+                    class="shadowBg" />
+                <div class="animate_text-wrap imgText">
+                    <div class="textItem">
+                        <div class="u36DemiBold">Fingerprint Unlock</div>
+                        <div class="u17Light">
+                            Provides an efficient and intuitive option for riding without
+                            the hassle of carrying a key.
+                        </div>
+                    </div>
+                    <div class="textItem">
+                        <div class="u36DemiBold">Built-in Navigation</div>
+                        <div class="u17Light">
+                            Goodbye phone, no more struggling to navigate with a tiny
+                            screen.
+                        </div>
+                    </div>
+                    <div class="textItem">
+                        <div class="u36DemiBold">Voice Control</div>
+                        <div class="u17Light">
+                            It offers customizable voice commands and horn beeps for fun
+                            interaction.
+                        </div>
+                    </div>
+                    <div class="textItem">
+                        <div class="u36DemiBold">Bluetooth Music</div>
+                        <div class="u17Light">
+                            It’s like having a personal DJ accompanying you everywhere you
+                            ride.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section12-mb animate_fullSection blackBg pcHide">
+        <div class="centerBox flexCol animate_fullContanier">
+            <div class="text_wrapped">
+                <h2></h2>
+                <h2></h2>
+            </div>
+
+            <div class="imgContainer">
+                <div class="videoItem bike4" style="position: static">
+                    <video muted="muted" playsinline="" prop="false" loop autoplay
+                        poster="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/ph0.jpg">
+                        <source src="https://cdn.shopify.com/videos/c/o/v/d5474ef0eaa541fe9e389c65726cc5af.mp4"
+                            type="video/mp4" />
+                    </video>
+                </div>
+                <div class="imgItem bike3">
+                    <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/ph0.jpg" alt="urtopia"
+                        class="ebike" />
+                </div>
+                <div class="videoItem bike2">
+                    <video muted="muted" playsinline="" prop="false" loop autoplay
+                        poster="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/ph010.jpg">
+                        <source src="https://cdn.shopify.com/videos/c/o/v/5abb455824de4f0a845b9965283f356e.mp4"
+                            type="video/mp4" />
+                    </video>
+                </div>
+                <div class="imgItem bike1">
+                    <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/ph010.jpg" alt="urtopia"
+                        class="ebike" />
+                </div>
+                <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Rectangle_21274.webp"
+                    class="shadowBg" />
+                <div class="animate_text-wrap imgText">
+                    <div class="textItem">
+                        <div class="u36DemiBold">Fingerprint Unlock</div>
+                        <div class="u17Light">
+                            Provides an efficient and intuitive option for riding without
+                            the hassle of carrying a key.
+                        </div>
+                    </div>
+                    <div class="textItem">
+                        <div class="u36DemiBold">Built-in Navigation</div>
+                        <div class="u17Light">
+                            Goodbye phone, no more struggling to navigate with a tiny
+                            screen.
+                        </div>
+                    </div>
+                    <div class="textItem">
+                        <div class="u36DemiBold">Voice Control</div>
+                        <div class="u17Light">
+                            It offers customizable voice commands and horn beeps for fun
+                            interaction.
+                        </div>
+                    </div>
+                    <div class="textItem">
+                        <div class="u36DemiBold">Bluetooth Music</div>
+                        <div class="u17Light">
+                            It’s like having a personal DJ accompanying you everywhere you
+                            ride.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section13 fullSection blackBg">
+        <div class="maxWidth flex_center_between section13_container" style="height: 100%">
+            <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_20546_ee37f948-9fe5-4b75-8aca-1fb2a07309e1.png"
+                alt="urtopia" />
+            <div style="color: #fff" class="textFlex">
+                <div class="u24Medium">GPS Tracking</div>
+                <h3>A Bike You'll<br />Never Lose</h3>
+                <div class="u17Light">
+                    GPS for security and navigation. No more phone distractions and find your bike easily.
+                </div>
+            </div>
+            <div class="mb-bottom">
+                <img src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/20230228-154102.png" />
+            </div>
+        </div>
+    </div>
+    <div class="section14 animate_fullSection blackBg">
+        <div class="wrapped beforeContent">
+            <div class="animate_fullContanier section14_content maxWidth">
+                <div class="leftContent">
+                    <div class="text-aside centerBox">
+                        <div>
+                            <div class="u24Medium">Track Your Route</div>
+                            <h3>
+                                Journeys Captured<br />
+                                Memories Made
+                            </h3>
+                            <div class="u170Light">
+                                Routes, speed, calories burned…all captured.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightContent">
+                    <img class="appImg" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/appp3.png"
+                        alt="urtopia" />
+                    <img class="appImg" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/appp2.png"
+                        alt="urtopia" />
+                    <img class="appImg" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/appp1.png"
+                        alt="urtopia" />
+                </div>
+            </div>
+        </div>
+        <div class="wrapped afterContent">
+            <div class="animate_fullContanier section14_content maxWidth">
+                <div class="leftContent">
+                    <div class="text-aside centerBox">
+                        <div>
+                            <div class="u24Medium">Share You Story</div>
+                            <h3>
+                                Meet New Friends<br />
+                                Like Their Rides
+                            </h3>
+                            <div class="u170Light">
+                                Share rides, photos, stories with Urtopia community in app.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightContent">
+                    <img class="appImg" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/appp4.png"
+                        alt="urtopia" />
+                    <img class="appImg" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/appp6.png"
+                        alt="urtopia" />
+                    <img class="appImg" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/appp5.png"
+                        alt="urtopia" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section15 blackBg">
+        <div class="maxWidth centerBox section15-mb-container">
+            <div class="item flexBox">
+                <div class="u24Medium">OTA Update</div>
+                <div class="u42DemiBold">Latest Tech<br />Best Ride</div>
+                <div class="u17Light">
+                    Hassle-free access to newest bike features and enhanced performance.
+                </div>
+                <div class="flex1">
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Mask_Group_18244.webp?v=1677118847" />
+                </div>
+
+            </div>
+            <div class="item">
+                <div class="u24Medium">CAN Bus</div>
+                <div class="u42DemiBold">Better Network<br />Better Life</div>
+                <div class="u17Light">
+                    Experience smoother and stress-free communication with CAN (Controller Area Network)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="centeral-content smartest">
+        <div class="u42DemiBold_v2">Smartest E-Bike Ever</div>
+        <div class="boxss">
+            <div>
+                <img class="lozad"
+                    data-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_22127_2x_0054733d-7211-4a90-8015-b42dc42dc886.jpg?v=1696737459"
+                    alt="">
+                <div class="u24DemiBold_v2">Anti-glare LED Display</div>
+                <div class="u17Light_v2">Urtopia’s smart core: Dot-matrix display, voice commands. Vital info and bike
+                    control, no smartphone required for your ride!</div>
+            </div>
+            <div>
+                <img class="lozad"
+                    data-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_22125_2x_4ae748d1-1ad5-47fd-b05b-cab45d65377e.jpg?v=1696743871"
+                    alt="">
+                <div class="u24DemiBold_v2">Portable Battery</div>
+                <div class="u17Light_v2">A 352.8 Wh lithium-ion removable battery provide sample energy so a rider can
+                    travel up to 75 miles (31 miles min.) after a mere 3-hr charge.</div>
+            </div>
+            <div>
+                <img class="lozad"
+                    data-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_22126_2x_824cb3a5-4b55-4341-83fe-8d2b911062fb.jpg?v=1696743879"
+                    alt="">
+                <div class="u24DemiBold_v2">20 Lux HeadLight</div>
+                <div class="u17Light_v2">20 Lux Headlight with German road regulation-compliant design: a well-balanced
+                    combination of beauty and safety.</div>
+            </div>
+            <div>
+                <img class="lozad"
+                    data-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_22130_2x_0d904ceb-205a-4450-a858-228909539c66.jpg?v=1696743892"
+                    alt="">
+                <div class="u24DemiBold_v2">Fenders & Kickstand</div>
+                <div class="u17Light_v2">Navigate rough terrains and any weather conditions with our pre-installed fenders
+                    and kickstand included in the package.</div>
+            </div>
+            <div>
+                <img class="lozad"
+                    data-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_22128_2x_abb6496d-8f8f-48be-945a-b0bb08cdd8ce.jpg?v=1696743899"
+                    alt="">
+                <div class="u24DemiBold_v2">Tektro Hydraulic Disc Brake</div>
+                <div class="u17Light_v2">It provide reliable and consistent stopping power in any weather condition,
+                    ensuring a safe and smooth ride.</div>
+            </div>
+            <div>
+                <img class="lozad"
+                    data-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_22129_2x_6c5b4cfe-d578-4394-a7d0-f5b41ac9532b.jpg?v=1696743907"
+                    alt="">
+                <div class="u24DemiBold_v2">8-Speed Shimano Gearing</div>
+                <div class="u17Light_v2">Experience seamless gear shifts and tackle different terrain with the versatile
+                    8-speed Shimano gearing system.</div>
+            </div>
+            <div>
+                <img class="lozad"
+                    data-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_22131_2x_a8a7e189-e540-4ec8-a21e-f5b8b212c64c.jpg?v=1696743914"
+                    alt="">
+                <div class="u24DemiBold_v2">Customized Motor</div>
+                <div class="u17Light_v2">The 350W intelligent motor delivers a quiet and smooth ride while also being
+                    energy-efficient, allowing riders to travel further.</div>
+            </div>
+            <div>
+                <img class="lozad"
+                    data-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_22132_2x_96c0d8ea-eb92-4361-a15c-5ac90b800d43.jpg?v=1696743920"
+                    alt="">
+                <div class="u24DemiBold_v2">Torque Sensor</div>
+                <div class="u17Light_v2">Unlike jerky cadence sensing, proprietary torque sensor enables super-fast speed
+                    adaption.</div>
+            </div>
+            <div>
+                <img class="lozad"
+                    data-src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_22133_2x_775a37f8-99de-4243-892f-86eccd1c0914.jpg?v=1696743926"
+                    alt="">
+                <div class="u24DemiBold_v2">Smart App</div>
+                <div class="u17Light_v2">Urtopia’s app maximizes e-bike potential: Real-time locating, route tracking,
+                    anti-theft alert, navigation, speaker, and more. Explore the possibilities!</div>
+            </div>
+        </div>
+    </div>
+    <div class="worldwide">
+        <div class="centeral-content">
+            <div class="u42DemiBold_v2">Worldwide <br class="mobileHide"> Service</div>
+            <div class="u17Light_v2">Urtopia is dedicated to deploying authorised service providers throughout the country for satisfactory service and maintenance.</div>
+        </div>
+    </div>
+    {% render 'chord-size-and-specs' %}
+    <div class="assembly">
+		<div class="centeral-content" style="box-sizing: content-box;">
+			<div class="gray-background-color">
+				<div class="u36DemiBold_v2">90% assembly</div>
+				<div class="u17DemiLight_v2">Delight in the convenience of our 90% pre-assembled e-bike package, making assembly a breeze!</div>
+			</div>
+			<div>
+				<img onclick="showVideoDialog('https://www.youtube.com/embed/meJBiIp32E0?autoplay=1&cc_load_policy=1')" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/t/63/assets/openvideo-1667475097262.svg" alt="">
+			</div>
+		</div>
+	</div>
+    <div class="accessories">
+        <div class="centeral-content">
+            <div class="u42DemiBold_v2">Customized Accessories</div>
+            <div class="boxs">
+                <div>
+                    <div class="back"></div>
+                    <div class="u30DemiBold_v2">Rear Rack</div>
+                    <div class="u17Light_v2">Resembling tree branches, it's customized to merge seamlessly with the bike frame. Rated to carry weight up to 26 lbs.</div>
+                </div>
+                <div>
+                    <div class="back"></div>
+                    <div class="u30DemiBold_v2">ARES Lights</div>
+                    <div class="u17Light_v2">Standing for Advanced Rear Early-indication System, ARES is ambient light sensing and indicates bike turns at one touch.</div>
+                </div>
+                <div>
+                    <div class="back"></div>
+                    <div class="u30DemiBold_v2">Front Rack</div>
+                    <div class="u17Light_v2">So much more space to carry daily essentials with a rated load weight up to 13 lbs.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenLite.min.js"></script>
+<script src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/1.14.2-TweenMax.js?v=1663912518"></script>
+<script src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2.0.3-ScrollMagic.min.js?v=1663912592"></script>
+<script src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2.0.3-animation.gsap.js?v=1663912682"></script>
+<script>
+    $('.bikes .dots > div').on('click', e => {
+        const t = $(e.target)
+        const parent = $(e.target.parentNode.parentNode)
+
+        const img_src = t.attr('img-src')
+        const variant_id = t.attr('variant-id')
+
+        // 重置active
+        parent.find('.dots > div').removeClass('active')
+        $('.bikes .dots > div')
+        // 再设置active
+        t.addClass('active')
+
+        parent.find('img').attr('src', img_src)
+        parent.find('a').attr('href', `/products/urtopia-chord-ebike?variant=${variant_id}`)
+    })
+
+    const controller = new ScrollMagic.Controller();
+
+    const section11_tween = new TimelineMax()
+        .add([
+            TweenMax.to(".section11 .sandBox", 0.5, {
+                height: "100%",
+                ease: "back.out(1.7)",
+            }),
+        ])
+        .add([
+            TweenMax.to(
+                ".section11 .sandBox .u72DemiBold_v2",
+                0.5,
+                {
+                    opacity: 1,
+                    y: 0,
+                    ease: "power3.out",
+                },
+                1
+            ),
+        ]);
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section11",
+        triggerHook: "onLeave",
+        duration: "100%",
+    })
+        .setPin(".chord-ebike .section11")
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section11",
+        triggerHook: "onLeave",
+        duration: "70%",
+        offset: 80,
+    })
+        .setTween(section11_tween)
+        .addTo(controller);
+
+
+    // section12 动画
+    var section12_tween_1 = new TimelineMax().add([
+        TweenMax.to(".section12 .textItem:nth-child(1)", 0.5, {
+            x: "-130%",
+            opacity: 1,
+            ease: "back.out(1.7)",
+        }),
+        TweenMax.to(".section12 .bike1", 0.5, {
+            css: {
+                display: "none",
+            },
+            onComplete: function () {
+                console.log("wanccheng");
+            },
+        }),
+        TweenMax.to(".section12 .textItem:nth-child(2)", 0.5, {
+            x: "150%",
+            opacity: 1,
+            ease: "back.out(1.7)",
+        }),
+    ]);
+
+    var section12_tween_2 = new TimelineMax().add([
+        TweenMax.to(".section12 .textItem:nth-child(1)", 0.3, {
+            x: "-50%",
+            opacity: 0,
+            ease: "back.out(1.7)",
+        }),
+        TweenMax.to(".section12 .textItem:nth-child(2)", 0.3, {
+            x: "50%",
+            opacity: 0,
+            ease: "back.out(1.7)",
+        }),
+        TweenMax.to(".section12 .textItem:nth-child(3)", 0.5, {
+            x: "-130%",
+            opacity: 1,
+            ease: "back.out(1.7)",
+        }),
+        TweenMax.to(".section12 .textItem:nth-child(4)", 0.5, {
+            x: "150%",
+            opacity: 1,
+            ease: "back.out(1.7)",
+        }),
+        TweenMax.to(".section12 .bike2", 0.5, {
+            css: {
+                display: "none",
+            },
+            onComplete: function () {
+            },
+        }),
+    ]);
+
+    var section12_tween_3 = new TimelineMax().add([
+        TweenMax.to(".section12 .bike3", 0.5, {
+            css: {
+                display: "none",
+            },
+            onComplete: function () {
+            },
+        }),
+    ]);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section12",
+        triggerHook: "onLeave",
+        duration: 4000,
+    })
+        .setPin(".chord-ebike .section12")
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section12",
+        triggerHook: "onLeave",
+        offset: 80,
+        duration: 1000,
+    })
+        .setTween(section12_tween_1)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section12",
+        triggerHook: "onLeave",
+        offset: 1800,
+        duration: 800,
+    })
+        .setTween(section12_tween_2)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section12",
+        triggerHook: "onLeave",
+        offset: 3000,
+        duration: 500,
+    })
+        .setTween(section12_tween_3)
+        .addTo(controller);
+
+
+
+    // section12 动画 -手机
+    var section12_tween_mb_1 = new TimelineMax().add([
+        TweenMax.to(".section12-mb .textItem:nth-child(1)", 0.5, {
+            x: 0,
+            opacity: 1,
+            ease: "back.out(1.7)",
+        }),
+        TweenMax.to(".section12-mb .bike1", 0.5, {
+            css: {
+                display: "none",
+            },
+        }),
+        TweenMax.to(".section12-mb .textItem:nth-child(2)", 0.5, {
+            x: 0,
+            opacity: 1,
+            ease: "back.out(1.7)",
+        }),
+    ]);
+
+    var section12_tween_mb_2 = new TimelineMax().add([
+        TweenMax.to(".section12-mb .textItem:nth-child(1)", 0.3, {
+            x: -100,
+            opacity: 0,
+            ease: "back.out(1.7)",
+        }),
+        TweenMax.to(".section12-mb .textItem:nth-child(2)", 0.3, {
+            x: 100,
+            opacity: 0,
+            ease: "back.out(1.7)",
+        }),
+        TweenMax.to(".section12-mb .textItem:nth-child(3)", 0.5, {
+            x: 0,
+            opacity: 1,
+            ease: "back.out(1.7)",
+        }),
+        TweenMax.to(".section12-mb .textItem:nth-child(4)", 0.5, {
+            x: 0,
+            opacity: 1,
+            ease: "back.out(1.7)",
+        }),
+        TweenMax.to(".section12-mb .bike2", 0.5, {
+            css: {
+                display: "none",
+            },
+            onComplete: function () {
+                console.log("wanccheng");
+            },
+        }),
+    ]);
+
+    var section12_tween_mb_3 = new TimelineMax().add([
+        TweenMax.to(".section12-mb .bike3", 0.5, {
+            css: {
+                display: "none",
+            },
+            onComplete: function () {
+                console.log("wanccheng");
+            },
+        }),
+    ]);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section12-mb",
+        triggerHook: "onLeave",
+        duration: 3000,
+    })
+        .setPin(".chord-ebike .section12-mb")
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section12-mb",
+        triggerHook: "onLeave",
+        offset: 100,
+        duration: 1000,
+    })
+        .setTween(section12_tween_mb_1)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section12-mb",
+        triggerHook: "onLeave",
+        offset: 1800,
+        duration: 800,
+    })
+        .setTween(section12_tween_mb_2)
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section12-mb",
+        triggerHook: "onLeave",
+        offset: 3000,
+        duration: 500,
+    })
+        .setTween(section12_tween_mb_3)
+        .addTo(controller);
+
+
+
+    // section14 动画
+    var section14_tween = new TimelineMax();
+    section14_tween.to(".section14 .beforeContent", 2, {
+        opacity: 0,
+    });
+
+    section14_tween.to(
+        ".section14 .afterContent",
+        2,
+        {
+            y: 0,
+            opacity: 1,
+        },
+        "-=2"
+    );
+
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section14",
+        triggerHook: "onLeave",
+        duration: "200%",
+    })
+        .setPin(".chord-ebike .section14")
+        .addTo(controller);
+
+    new ScrollMagic.Scene({
+        triggerElement: ".chord-ebike .section14",
+        triggerHook: "onLeave",
+        duration: "100%",
+        offset: 100,
+    })
+        .setTween(section14_tween)
+        .addTo(controller);
+
+
+
+    $(".topbar .centeral-content .pcHide").click(function (e) {
+        const t = $('.topbar .dropdown')
+        const isShow = t.is(':visible')
+
+        $(".topbar .centeral-content .pcHide").css('rotate', isShow ? '0deg' : '180deg')
+        t.slideToggle()
+    })
+</script>
+
+<script>
+  let scrollAction = { x: 'undefined', y: 'undefined' }
+  let scrollDirection = ''
+
+function scrollFunc() {
+  if (typeof scrollAction.x == 'undefined') {
+    scrollAction.x = window.pageXOffset;
+    scrollAction.y = window.pageYOffset;
+  }
+  var diffX = scrollAction.x - window.pageXOffset;
+  var diffY = scrollAction.y - window.pageYOffset;
+  if (diffX < 0) {
+    // Scroll right
+    scrollDirection = 'right';
+  } else if (diffX > 0) {
+    // Scroll left
+    scrollDirection = 'left';
+  } else if (diffY < 0) {
+    // Scroll down
+    scrollDirection = 'down';
+  } else if (diffY > 0) {
+    // Scroll up
+    scrollDirection = 'up';
+  } else {
+    // First scroll event
+  }
+  scrollAction.x = window.pageXOffset;
+  scrollAction.y = window.pageYOffset;
+}
+
+if (!global_config.is_mobile && global_config.is_pc) {
+      window.onscroll = throttle(function (e) {
+      scrollFunc()
+
+      try {
+        if (scrollDirection == 'down') {
+          //页面向下滚动要做的事情
+          // console.log('-====向下滚动了');
+          document.querySelector('.header-wrapper').style.position = 'inherit';
+          //$('.chord-ebike .topbar').css({ top: 0, 'z-index': 3 })
+
+          if ($('header-menu details[open]')) {
+            $('header-menu details[open] summary')[0].click()
+          }
+          
+        } else if (scrollDirection == 'up') {
+          //页面向上滚动要做的事情
+          // console.log('-====向上滚动了');
+          document.querySelector('.header-wrapper').style.position = 'fixed';
+          document.querySelector('.header-wrapper').style.top = 0;
+          document.querySelector('.header-wrapper').style.width = '100%';
+          //$('.chord-ebike .topbar').css({ top: '60px', 'z-index': 2 })
+
+          if (scrollAction.y < 80) {
+            document.querySelector('.header-wrapper').style.position = 'inherit';
+          }
+        }
+      } catch (error) {}
+    }, 30);
+}
+</script>
+
+<script>
+  $('[action_type]').on('click', e => {
+        const action_type = $(e.target).closest('[action_type]').attr('action_type')
+      fetchBuried('websiteclick', 'chord-ebikepage', {
+        //action_type: abtest_type,
+        event_name: 'button-click',
+        button: action_type
+      }, true)
+  })
+</script>

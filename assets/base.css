@@ -222,10 +222,6 @@ html.no-js .no-js-hidden {
   margin: 0 auto;
 }
 
-.header__menu-item{
-  text-decoration:none;
-}
-
 @media screen and (min-width: 750px) {
   .page-width {
     padding: 0 5rem;
@@ -243,6 +239,8 @@ html.no-js .no-js-hidden {
     padding: 0 5rem;
   }
 }
+  
+
 
 @media screen and (min-width: 990px) {
   .page-width--narrow {
@@ -2183,6 +2181,8 @@ input[type='checkbox'] {
 
 .announcement-bar__link .announcement-bar__message {
   padding: 0;
+  font: normal normal 500 16px/17px Urbane;
+  letter-spacing: 0px;
 }
 
 .announcement-bar__message {
@@ -2201,7 +2201,9 @@ input[type='checkbox'] {
   position: sticky;
   top: 0;
 }
-
+.shopify-section-header-static{
+  position:static;
+}
 .shopify-section-header-hidden {
   transform: translateY(-100%);
 }
@@ -2491,6 +2493,12 @@ details[open] .modal-overlay::after {
   right: 0.3rem;
 }
 
+@media screen and (max-width: 750px) {
+  .announcement-bar__link .announcement-bar__message {
+    font: normal normal 500 13px/14px Urbane;
+    letter-spacing: 0px;
+  }
+}
 @media screen and (min-width: 750px) {
   .search-modal__close-button {
     right: 1rem;
@@ -2561,6 +2569,7 @@ details[open] > .header__submenu {
   margin-left: -1.2rem;
   grid-area: navigation;
   display: none;
+
 }
 
 .header--top-center .header__inline-menu,
@@ -2570,9 +2579,9 @@ details[open] > .header__submenu {
 
 @media screen and (min-width: 990px) {
   .header__inline-menu {
-    /*     display: block; */
+/*     display: block; */
       display: flex;
-      justify-content: flex-end;
+  justify-content: flex-end;
   }
 
   .header--top-center .header__inline-menu {
@@ -2888,7 +2897,6 @@ details-disclosure > details {
 .font-body-bold {
   font-weight: var(--font-body-weight-bold);
 }
-
 .jdgm-rev__icon{
 display:none!important;
 }
@@ -2907,3 +2915,63 @@ margin-top:-20px!important;
 
 }
 
+
+
+
+
+
+.product .adwarsssss {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 6px;
+  max-height: 50px;
+  overflow: hidden;
+}
+
+.product .adwarsssss img {
+  height: 100%;
+  width: auto;
+  margin-right: 16px;
+}
+
+@media (max-width: 768px) {
+  .product .adwarsssss {
+    max-height: 30px;
+    margin-bottom: 6px;
+  }
+
+  .product .adwarsssss img {
+    margin-right: 8px;
+  }
+}
+
+
+.product .sale-taggggggg {
+  background-color: #BB2329;
+  color: #fff;
+  padding: 2% 0 2% 5%;
+  border-radius: 18px;
+  width: fit-content;
+  height: 35px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 9px;
+}
+
+.product .sale-taggggggg::after {
+  display: block;
+  content: "";
+  background: url('https://newurtopia.de/cdn/shop/files/Mask_Group_18957_2x_7f38301a-c58d-4b30-95a6-64c51efdec3f.png?v=1703815709') center right/cover no-repeat;
+  width: 65px;
+  height: 35px;
+}
+
+
+.visuallyhidden {
+  position: absolute;
+  top: 0;
+  transform: translateY(-200%);
+}

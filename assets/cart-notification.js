@@ -28,6 +28,11 @@ class CartNotification extends HTMLElement {
     );
 
     document.body.addEventListener("click", this.onBodyClick);
+
+    
+    setTimeout(() => {
+      $('.cart-notification__links .button--primary').text(window.show_notification_checkout_button ? 'Check out with klarna' : 'Check out')
+    })
   }
 
   close() {
@@ -54,19 +59,21 @@ class CartNotification extends HTMLElement {
       .then((res1) => {
         let discountSavedPrice = 0;
         res1.items.forEach((item) => {
-          if (item.product_title == "Carbon One") {
+          const title = item.product_title
+          if (title.indexOf("Carbon One")!=-1 || title.indexOf("Carbon 1")!=-1) {
             bikeQuantity += item.quantity;
           }
-            discountSavedPrice += (item.original_line_price - item.final_line_price);
+          discountSavedPrice += (item.original_line_price - item.final_line_price);
         });
+
         discountSavedPrice /= 100;
         if (bikeQuantity) {
-          const formatter = new Intl.NumberFormat("de-DE", {
+          const formatter = new Intl.NumberFormat("en-US", {
             style: "currency",
-            currency: "EUR",
+            currency: "USD",
           });
           $(this.notification)
-            .find(".notification-tips>span:nth-child(3)")
+            .find(".notification-tips>span")
             .html(formatter.format(discountSavedPrice+bikeQuantity*600));
           $(this.notification)
             .find(".notification-tips")

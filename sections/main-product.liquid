@@ -428,6 +428,7 @@
                     <button
                       type="submit"
                       name="add"
+                      id="add_to_cart_btn"
                       class="product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
                       {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
                     >
@@ -1112,6 +1113,3 @@
   ]
 }
 {% endschema %}
-<style>
-  .jdgm-medals-wrapper{display:none !important;}
-    </style>

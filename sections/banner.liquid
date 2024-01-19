@@ -1,57 +1,25 @@
 <div class="swiper homeSwiper">
   <div class="swiper-wrapper">
-    <!--     <div class="swiper-slide oneslide">
-      <div class="slideContent">
-        <div class="topSlide">
-          <img id="deLogo" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/20220713-072251.png?v=1657668208">
-          <div class="slideTitle">
-            EUROBIKE
-            <br>
-            <span style="font-size:80px;">July 13-17, 2022</span>
-          </div>
-        </div>
-        <div class="bottomSlide">
-          <div class="slideDes">
-        	<div class="spent">
-              Messe Frankfurt
-              <br>
-              Hall: 8 Booth NO. : E11 
-              <br>
-              Test Ride Area: H06a
-            </div>
-
-            <img class="pcDeLogo" src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/20220713-072251.png?v=1657668208">
-          </div>     
-        </div>
-      </div>
-    </div> -->
-<!--
-    <div class="swiper-slide cheersSlide">
+    <!--
+    <div class="swiper-slide labourSlide">
+      <div class="imgContent"></div>
       <div class="content">
-        <div class="cheers-title">
-          CHEERS WITH
-          <br />
-          THE SMARTEST
-          <br />
-          E-BIKE
+        <div class="labour-freeImg">
         </div>
-        <div class="cheers-deteil">
-          August 26-28<br />
-          At Münchnerstr. 23<br />
-          Haar bei Muenchen
+        <div class="labour-timer">
+          <img src="http://i.countdownmail.com/205dop.gif" style="display:inline-block!important;max-width:544px!important;" border="0" alt="countdownmail.com"/>
         </div>
-        <div class="cheers-btn">
+        <div class="labour-btn">
           <a
             class="moreBtn bannerBtn buyBtn"
-            href="/pages/cheers-with-the-smartest-ebike"
-            >Learn More
+            href="/products/urtopia-carbon-e-bike"
+            >Buy Now
           </a>
         </div>
       </div>
-      <div class="imgContent"></div>
     </div>
--->
-    <div class="swiper-slide twoslide">
+    -->
+    <div class="swiper-slide twoslide lozad" data-toggle-class="active">
       <div class="slideContent">
         <div class="topSlide">
           <div class="slideTitle">
@@ -73,17 +41,16 @@
         </div>
       </div>
     </div>
-
     <!--     <div class="swiper-slide threeslide">
       <div class="slideContent">
         <div class="topSlide">
-        	<div class="slideTitle">
+            <div class="slideTitle">
               TWILIGHT
             </div>
-          	<div class="des" style="color:#fff;font-size:24px;margin-top:24px;">Born to Embrace All Terrains</div>
+              <div class="des" style="color:#fff;font-size:24px;margin-top:24px;">Born to Embrace All Terrains</div>
         </div>
         <div  class="bottomSlide">
-        	<a class="moreBtn bannerBtn" style="background:none;color:#fff;margin-top:88px;border:1px solid #fff" href="/pages/twilight">Learn More</a>
+            <a class="moreBtn bannerBtn" style="background:none;color:#fff;margin-top:88px;border:1px solid #fff" href="/pages/twilight">Learn More</a>
         </div>        
       </div>
     </div> -->
@@ -91,13 +58,13 @@
     <!--     <div class="swiper-slide fourslide">
       <div class="slideContent">
         <div class="topSlide">
-        	<div class="slideTitle">
-          		CHORD
-        	</div>
-        	<div class="des" style="color:#000;font-size:24px;margin-top:24px;">Elegance, Like Music</div>
+            <div class="slideTitle">
+                  CHORD
+            </div>
+            <div class="des" style="color:#000;font-size:24px;margin-top:24px;">Elegance, Like Music</div>
         </div>
         <div  class="bottomSlide">
-        	<a class="moreBtn bannerBtn" style="background:none;color:#000;margin-top:88px;border:1px solid #000" href="/pages/chord">Learn More</a>
+            <a class="moreBtn bannerBtn" style="background:none;color:#000;margin-top:88px;border:1px solid #000" href="/pages/chord">Learn More</a>
         </div>
         
       </div>
@@ -137,62 +104,62 @@
   }
   .swiper-slide.fourslide {
     background-image: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/20220712-170034.jpg?v=1657616930");
-  }
-  .swiper-slide.cheersSlide {
-    background-image: url("https://cdn.shopify.com/s/files/1/0633/2068/6808/files/2022-cheers-bg.jpg?v=1661242128");
+  }/*
+  .swiper-slide.labourSlide {
+    background-image: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2022-labour-bg-pc.jpg?v=1661759479");
     background-size: cover;
-    background-position: center;
+    background-position: left;
   }
-  .swiper-slide.cheersSlide .content {
-    width: 65%;
+  .swiper-slide.labourSlide .content {
+    width: 53%;
     height: 100%;
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    position: absolute;
+    right:5%;
+    align-items: flex-start;
   }
-  .swiper-slide.cheersSlide .content .cheers-title {
-    width:70%;
-    
-    line-height: 66px;
-    font-size: 50px;
-    font-family: proxima-nova, sans-serif;
-    font-weight: bold;
-    color: #161c1f;
+  .swiper-slide.labourSlide .content .labour-freeImg {
+    background-image: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2022-labour-freeImg-pc.png?v=1661759479");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 62%;
+    width: 88%;
+    margin-top: 40px;
   }
-  .swiper-slide.cheersSlide .content .cheers-deteil {
-    line-height: 42px;
-    margin-top: 16px;
-    width:70%;
-    height:25%;
-    font-size: 30px;
-    font-family: "Gotham Book" ;
-    font-weight: normal;
-    color: #161c1f;
+  .labour-timer{
+    margin-left:22%;
+    height: 145px;
+    overflow: hidden;
   }
-  .swiper-slide.cheersSlide .content .cheers-btn{
-    width:70%;
+  .labour-timer img{
+    width:auto;
   }
-  .swiper-slide.cheersSlide .content .cheers-btn > a {
-    width: 299px;
-    height: 58px;
-    background: #ffffff;
+  .swiper-slide.labourSlide .content .labour-btn{
+    margin-left:22%;
+  }
+  .swiper-slide.labourSlide .content .labour-btn > a {
+    width: 350px;
+    height: 55px;
+    background: #D0010B;
+    color: #fff;
     border-radius: 30px 30px 30px 30px;
-    font-size: 24px;
+    font-size: 30px;
     font-family: proxima-nova, sans-serif;
     font-weight: 600;
-    color: #161c1f;
   }
-  .swiper-slide.cheersSlide .imgContent {
-    background-image: url("https://cdn.shopify.com/s/files/1/0633/2068/6808/files/2022-cheers-bg.png?v=1661217599");
+  .swiper-slide.labourSlide .imgContent {
+    background-image: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2022-labour-bike-pc.png?v=1661759479");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    right: 8%;
-    width: 50%;
+    left:5%;
+    width: 51%;
     height: 100%;
-  }
+  }*/
   .home-banner .swiper-slide.threeslide {
     justify-content: flex-end;
   }
@@ -269,7 +236,7 @@
   .bottomSlide table.countdown .countdownText.pcCountdownText {
     display: block;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1000px) {
     .home-banner .swiper-slide .slideContent {
       width: 100%;
       height: 100%;
@@ -292,44 +259,58 @@
     .swiper-slide.fourslide {
       background-image: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/20220712-231301.jpg?v=1657638960");
     }
-
-  .swiper-slide.cheersSlide {
-    background-image: url("https://cdn.shopify.com/s/files/1/0633/2068/6808/files/2022-cheers-bg-mb.png?v=1661239805");
+/*
+  .swiper-slide.labourSlide {
+    background-image: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2022-labour-bg-mb.jpg?v=1661759479");
     background-size: cover;
-    background-position: center;
+    background-position: top;
   }
-  .swiper-slide.cheersSlide .content {
+  .swiper-slide.labourSlide .content {
     width: 100%;
+    right:0;
+    justify-content: flex-end;
+    align-items: center;
   }
-  .swiper-slide.cheersSlide .content .cheers-title {
-text-align: left;
-font: normal normal bold 36px/44px proxima-nova, sans-serif;
-    width: 90%;
-    margin: 370px 0 0 0;
+    
+  .swiper-slide.labourSlide .content .labour-freeImg {
+    background-image: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2022-labour-freeImg-mb.png?v=1661759479");
+    height:55%;
+    width:calc(100% - 30px);
+    margin:0;
   }
-  .swiper-slide.cheersSlide .content .cheers-deteil {
-    width: 90%;
-    height:initial;
-    margin:20px;
-text-align: left;
-font: normal normal normal 20px/28px "Gotham Book";
+  .labour-timer{
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin:0 0 10px 0;
+    height: auto;
+    width:390px;
+  	aspect-ratio: 6/1.25;
+    overflow: hidden;
   }
-  .swiper-slide.cheersSlide .content .cheers-btn{
-    width:initial;
-    width:90%;
+  .labour-timer img{
+    width:80%;
   }
-  .swiper-slide.cheersSlide .content .cheers-btn > a {
-background: #FFFFFF 0% 0% no-repeat padding-box;
-border-radius: 30px;
-height: 37px;width: 100%;
+  .swiper-slide.labourSlide .content .labour-btn{
+    width:calc(100% - 60px);
+    height: 95px;
+    margin:0;
   }
-  .swiper-slide.cheersSlide .imgContent {
-    right: 0;
+  .swiper-slide.labourSlide .content .labour-btn > a {
+    border-radius: 30px;
+    height: 48px;
+    line-height:48px;
+    width: 100%;
+    transform:initial;
+  }
+  .swiper-slide.labourSlide .imgContent {
+    left: 0;
     top: 0;
     width: 100%;
-    height: 62%;
-    background-image: url("https://cdn.shopify.com/s/files/1/0633/2068/6808/files/2022-cheers-bike-mb.png?v=1661240158");
+    height: 69%;
+    background-image: url("https://cdn.shopify.com/s/files/1/0583/5810/4213/files/2022-labour-bike-mb.png?v=1661759479");
   }
+    */
     .home-banner .swiper-slide .slideTitle {
       font-size: 42px;
       line-height: 1.125em;
@@ -419,9 +400,14 @@ height: 37px;width: 100%;
       margin: 0 auto;
     }
   }
+  @media screen and (max-width){
+    
+  }
 </style>
+<!--
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"> </script>
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">    
 <script>
-  /*
   var mySwiper = new Swiper(".home-banner .swiper", {
     loop: true,
     pagination: {
@@ -433,10 +419,11 @@ height: 37px;width: 100%;
       prevEl: ".swiper-button-prev",
     },
   });
-  document.querySelector(".swiper-slide.cheersSlide .content .cheers-btn>a").addEventListener("click",()=>{
-    document.querySelector("#cheers-homepage-LearnMore-track-btn").click()
-  })*/
+  document.querySelector(".swiper-slide.labourSlide .content .labour-btn>a").addEventListener("click",()=>{
+    document.querySelector("#labour-homepage-LearnMore-track-btn").click()
+  })
 </script>
+-->
 
 {% schema %}
 {

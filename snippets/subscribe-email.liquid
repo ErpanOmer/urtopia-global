@@ -1,0 +1,432 @@
+<style>
+    .subscribe-container {
+        display: grid;
+        max-width: 976px;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        border-radius: 10px;
+        background-color: transparent;
+    }
+    
+    .subscribe-container .subscribe {
+        display: flex;
+        flex-direction: column;
+        padding: 10%;
+        justify-content: center;
+        background-color: #fff;
+    }
+    
+    .subscribe-container .subscribe img {
+        margin: 25px 0 0;
+    }
+
+    .subscribe-container .subscribe .ffff {
+      font-size: 30px;
+      color: #104686;
+      font-weight: 600;
+    }
+
+    .subscribe-container .subscribe .u17Medium_v2  {
+      margin: 10% 0;
+    }
+    
+    .subscribe-container .subscribe .email {
+        box-sizing: border-box;
+        display: flex;
+        height: 47px;
+        position: relative;
+    }
+    
+    .subscribe-container .subscribe .email input {
+        height: 100%;
+        width: 100%;
+        border-color: #0000004d;
+        border-radius: 30px;
+        color: #000;
+        padding: 0 25px;
+        font-size: 14px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+
+    .subscribe-container .subscribe .email input:focus-visible {
+        outline-offset: unset;
+        box-shadow: unset;
+        outline: unset;
+        border-color: #000;
+      }
+  
+    .subscribe-container .subscribe .email button {
+      border: none;
+  }
+  
+    .subscribe-container .subscribe .email input:focus-visible {
+      border-color: #000;
+    }
+    
+    .subscribe-container .subscribe .email .my-button {
+        position: absolute;
+        right: 0;
+        z-index: 2;
+        height: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    
+    .subscribe-container .subscribe .email input::placeholder {
+        color: #aaa;
+    }
+    
+    .subscribe-container .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 40px;
+      color: #999;
+      cursor: pointer;
+      font-weight: 100;
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      width: 40px;
+      text-align: center;
+    }
+
+    .subscribe-container .u72DemiBold_v2 {
+      margin: 12% 0;
+    }
+
+    .subscribe-container .subscribe .u72DemiBold_v2 {
+      margin: 6% 0 2%;
+    }
+    .subscribe-container .subscribe .u17DemiBold_v2 {
+        color: #fff;
+        border-radius: 12px;
+        padding: 2px 11px;
+        background-image: linear-gradient(90deg, #EE6426, #F4492A);
+        font-size: 16px;
+    }
+    .subscribe-container .subscribe .u17Light {
+      margin: 12% 0 0;
+      font-size: 15px;
+    }
+    .subscribe-container .subscribe .new-contact {
+      margin: 3% 0 12%;
+    }
+    
+    @media (max-width: 767px) {
+        .subscribe-container {
+            grid-template-columns: 1fr;
+        }
+    
+        .subscribe-container .subscribe {
+            padding: 8%;
+        }
+    
+        .subscribe-container .subscribe img {
+            margin: 15px 0 0;
+        }
+
+        .subscribe-container .subscribe .ffff {
+          font-size: 20px;
+        }
+    
+        .subscribe-container .subscribe .u17Light {
+            line-height: 21px;
+            margin: 0 0 15px;
+            font-size: 13px;
+        }
+    
+        .subscribe-container .subscribe .email {
+            height: 40px;   
+        }
+    
+        .subscribe-container .subscribe .email input {
+            font-size: 12px;
+            padding: 0 15px;
+        }
+    
+        .subscribe-container .close {
+            color: #fff;
+            top: 0.5%;
+            right: 1%;
+        }
+
+        .subscribe-container .subscribe .u17Medium_v2 {
+          font-size: 14px;
+          margin: 5% 0;
+        }
+
+        .subscribe-container .subscribe .u17Medium_v2  .u72DemiBold_v2 {
+            font-size: 42px;
+        }
+
+        .subscribe-container .subscribe .u72DemiBold_v2 {
+      margin: 4% 0 2%;
+      font-size: 48px;
+    }
+    .subscribe-container .subscribe .u17DemiBold_v2 {
+      font-size: 14px;
+    }
+    .subscribe-container .u72DemiBold_v2 .u30DemiBold_v2 {
+      font-size: 20px;
+    }
+    .subscribe-container .subscribe .u17Light {
+      margin-top: 8%;
+    }
+      .subscribe-container .subscribe .u30Medium_v2 {
+        font-size: 18px;
+    }
+
+    }
+    </style>
+
+    <style>
+      .video-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #0009;
+      }
+
+
+      .video-box .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        color: #fff;
+        width: 30px;
+        height: 30px;
+        background: #0c0c0ccc;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 50%;
+      }
+    </style>
+
+    <link rel="preload" href="https://cdn.shopify.com/s/files/1/0633/2068/6808/files/Urtopia_-_Auto_Rack_-_Original_Size_-_RAW-299_2x_84a04d1d-8f14-49ec-a1d8-571133a24a22.jpg?v=1697185452" as="image">
+    <link rel="preload" href="https://cdn.shopify.com/s/files/1/0633/2068/6808/files/Urtopia_-_Auto_Rack_-_Original_Size_-_RAW-299_2x_607ae381-92e3-4927-9b90-7f9af7256e5b.jpg?v=1697185459&width=500" as="image">
+    <link rel="preload" href="https://cdn.shopify.com/s/files/1/0633/2068/6808/files/20230609-untitled-9762.jpg?v=1691048775&width=500" as="image">
+  <script>
+
+    class MyStorage {
+      constructor(props) {
+        this.props = props || {};
+        this.source = this.props.source || window.localStorage;
+        this.initrun();
+      }
+      initrun() {
+        /*
+         * set 存储方法
+         * @ param {string} key 键
+         * @ param {string} value 值，存储的值可能是数组/对象，不能直接存储，需要转换 json.stringify
+         * @ param {string} expired 过期时间，以分钟为单位
+         * @ 由@it·平头哥联盟-首席填坑官∙苏南 分享
+         */
+        const reg = new RegExp('__expires__');
+        let data = this.source;
+        let list = Object.keys(data);
+        if (list.length > 0) {
+          list.map((key, v) => {
+            if (!reg.test(key)) {
+              let now = Date.now();
+              let expires = data[`${key}__expires__`] || Date.now() + 1;
+              if (now >= expires) {
+                this.remove(key);
+              }
+            }
+            return key;
+          });
+        }
+      }
+  
+      set(key, value, expired = 3) {
+        /*
+        * set 存储方法
+        * @ param {string} key 键
+        * @ param {string} value 值，
+        * @ param {string} expired 过期时间，以分钟为单位，非必须
+        * @ 由@it·平头哥联盟-首席填坑官∙苏南 分享
+        */
+        let source = this.source;
+        source[key] = JSON.stringify(value);
+        if (expired){
+        source[`${key}__expires__`] = Date.now() + 1000 * 60 * 60 * 24 * expired
+        };
+        return value;
+       }
+  
+      get(key) {
+        /*
+        * get 获取方法
+        * @ param {string} key 键
+        * @ param {string} expired 存储时为非必须字段，所以有可能取不到，默认为 date.now+1
+        * @ 由@it·平头哥联盟-首席填坑官∙苏南 分享
+        */
+        const source = this.source,
+        expired = source[`${key}__expires__`]||Date.now()+1;
+        const now = Date.now();
+        
+        if ( now >= expired ) {
+        this.remove(key);
+        return;
+        }
+        const value = source[key] ? JSON.parse(source[key]) : source[key];
+        return value;
+       }
+  
+      remove(key) {
+        const data = this.source,
+        value = data[key];
+        delete data[key];
+        delete data[`${key}__expires__`];
+        return value;
+       }
+    }
+  
+  
+    const storage = new MyStorage()
+
+  const subscribeHtml = `<div class="subscribe-container">
+    <img class="mobileHide" src="${global_config.subscribe_email_dialog_config.background_imgae_pc}" alt="">
+    <img class="pcHide" src="${global_config.subscribe_email_dialog_config.background_imgae_mb}" alt="">
+    <div class="subscribe">
+        <span class="u20DemiBold_v2">{{ settings.sale_name }}</span>
+        <div class="u72DemiBold_v2">{{ settings.carbon1s_ebike_discount_price | money_without_trailing_zeros }}<span class="u30DemiBold_v2">OFF</span></div>
+        <div class="u30Medium_v2">On Carbon1s</div>
+        <span class="u17Light">Subscribe to Urtopia for exclusive coupons, engaging stories, and the latest product news.</span>
+        <form class="new-contact" action="/contact#ContactFooter" target="_blank" method="post" accept-charset="UTF-8">
+        <div class="email">
+              <input type="hidden" name="form_type" value="customer">
+              <input type="hidden" name="utf8" value="✓">
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <input placeholder="Enter email here" type="email" name="contact[email]" required>
+              <button class="my-button my-button-black" type="submit">Subscribe</button>
+        </div>
+      </form>
+      <div class="u11Light_v2 mobileHide">*For any order during Oct 1 - Dec 31 2023, if there is a price drop within this period on our website, you can request a refund for the difference by contacting our support. The refund will be automatically approved and returned to your account.</div>
+    </div>
+    <span class="close" onclick="closeEmailDialog()">×</span>
+</div>`
+
+  function debounce(fn, wait = 300) {
+    // 自由变量，debounce执行完成被释放，time也不会被释放
+    let time;
+    // 返回一个闭包，接受参数
+    return function (...args) {
+        // 保存闭包被调用时的this
+        const this_ = this;
+        // 清除上一次的定时器
+        if (time) {
+            clearTimeout(time);
+        };
+        // 不再是直接执行fn，在内部传递参数
+        time = setTimeout(function () {
+            // 通过apply修改fn的this
+            fn.apply(this_, args);
+        }, wait);
+    }
+};
+
+
+  function showEmailDialog (emailtag) {
+    if (global_config.subscribe_email_dialog_config.is_hide) {
+      return
+    }
+
+    if (!emailtag && storage.get('emailDialogHideDay')) {
+      return
+    }
+
+    showMiniDialog(subscribeHtml)
+
+    setTimeout(() => {
+        $('.subscribe-container form').on("submit", function (event) {
+          const email = $('.subscribe-container form input[type="email"]').val()
+          // 埋点
+          fetchBuried('emailpop', 'submit', { email, tag: `US,POPUP${emailtag ? ',' + emailtag : ''}` })
+          closeEmailDialog(14)
+      
+          event.preventDefault();
+          return false;
+      })
+
+
+      let startInput = false
+      $('.subscribe-container input').on('input', debounce(e => {
+          if (startInput) {
+              return
+          }
+
+          startInput = true
+          fetchBuried('emailpop', 'enter', {
+              email: e.target.value,
+              tag: 'US,POPUP'
+          })
+      }, 2000))
+
+      
+
+    }, 1000)
+  }
+
+  function closeEmailDialog (day = 3) {
+    storage.set('emailDialogHideDay', 'emailDialogHideDay', day)
+
+    // 关闭弹窗
+    closeMiniDialog()
+  }
+
+
+  // 视频播放
+  function showVideoDialog (src = '') {
+    console.log('src', src)
+
+    if (!src) {
+      return
+    }
+
+    const template = `<div class="video-box">
+      <div style="position: relative">
+        <iframe
+          width="${document.body.clientWidth > 768 ? 840 : document.body.clientWidth * 0.84 }"
+          height="${document.body.clientWidth > 768 ? 472 : 'auto'}"
+          src="${src}"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <span class="close" onclick="closeMiniDialog()">x</span>
+      </div>
+    </div>`
+
+    showMiniDialog(template)
+  }
+
+
+  
+  function showMiniDialog(html = '') {
+    const mini_dialog = $('body .mini-dialog')
+
+    if (mini_dialog.length) {
+        return setTimeout(showMiniDialog, 5000, html)
+    }
+
+    setTimeout(() => {
+      $("body").append(`<div class="mini-dialog" style="display: flex;">${html}</div>`)
+    })
+  }
+  
+  function closeMiniDialog() {
+    // console.log(a === document.querySelector('body .mini-dialog'))
+    $('body .mini-dialog').remove()
+  }
+
+
+  const emailtag = getSearchValues().emailtag
+  setTimeout(showEmailDialog, emailtag ? 1000 : global_config.subscribe_email_dialog_config.show_delay_time * 1000, emailtag)
+  </script>

@@ -44,6 +44,9 @@
 </div>
     
 <style>
+  .reviewList .swiper{
+      overflow:unset;
+    }
   .reviewList{
     overflow:hidden;
     padding:78px 0px;
@@ -51,9 +54,6 @@
     justify-content: center;
     align-items: center;
   }
-  .reviewList .swiper{
-      overflow:unset;
-    }
   .reviewList>.swiperWraped{
     width:1248px;
   }
@@ -114,6 +114,7 @@
   
 </style>
 
+<script src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/1.14.2-TweenMax.js?v=1663912518"></script>
 <script>
   function prevSwiper(){
     let swiper_target = $('.reviewList .swiperContainer')[0]

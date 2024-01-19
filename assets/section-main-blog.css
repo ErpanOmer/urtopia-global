@@ -14,7 +14,7 @@
     text-decoration: none;
 }
 .card__heading.h2{
-  font-family: proxima-nova,sans-serif;
+  font-family: ProximaNova Semibold;
   margin-bottom:2rem;
 }
 .main-blog-header{
@@ -72,12 +72,12 @@
   }
   .main-blog-options-extend{
     padding: 12px;
+    font-family: ProximaNova Semibold;
     margin-bottom: 20px;
     display: flex;
     border-bottom: 1px solid #00000030;
     justify-content: space-between;
     font-size: 16px;
-    font-family: proxima-nova,sans-serif;
     line-height: 24px;
   }
   .main-blog-options-extend:after{
