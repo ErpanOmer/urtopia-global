@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "shopify theme dev -s urtopia-de.myshopify.com -t 136931705048 --port 8000",
-    "pull": "shopify theme pull -s urtopia-de.myshopify.com --live",
+    "dev": "shopify theme dev -s urtopia-gl.myshopify.com -t 164763304241 --port 7000",
+    "pull": "shopify theme pull -s urtopia-gl.myshopify.com --live",
     "backup": "node backup.js"
   },
   "repository": {
