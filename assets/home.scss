@@ -17,7 +17,7 @@ h4 {
 
 .banner {
     background: url('https://cdn.shopify.com/s/files/1/0583/5810/4213/files/20240108-101223.jpg?v=1704680001') center center/cover no-repeat;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 67px);
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -45,7 +45,7 @@ h4 {
 
     @media (max-width: 767px) {
         background-image: url('https://cdn.shopify.com/s/files/1/0633/2068/6808/files/1221_2x_13c79827-30a2-4a0a-9634-678c164f6071.jpg?v=1704521585');
-        height: calc(100vh - 102px);
+        height: calc(100vh - 64px);
 
         .u60Medium_v2 {
             font-size: 36px;
