@@ -18,7 +18,7 @@
         "type": "text",
         "id": "carbon1s_ebike_discount_price",
         "label": "carbon车折扣价",
-        "default": "50000"
+        "default": "0"
       },
       {
         "type": "text",
@@ -54,7 +54,7 @@
         "type": "text",
         "id": "chord_ebike_discount_price",
         "label": "chord 车折扣价",
-        "default": "50000"
+        "default": "0"
       },
       {
         "type": "text",
