@@ -194,17 +194,6 @@
     },
     "1699966049f4e4155b": {
       "type": "apps",
-      "blocks": {
-        "042d457b-d35e-42c6-80b9-9c8877e00a14": {
-          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget_homepage\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "042d457b-d35e-42c6-80b9-9c8877e00a14"
-      ],
       "settings": {
         "include_margins": true
       }

@@ -2,7 +2,6 @@
   "sections": {
     "16560726083ec39d80": {
       "type": "rich-text",
-      "disabled": true,
       "blocks": {
         "16560726087dbdbbc5-0": {
           "type": "heading",
@@ -15,6 +14,7 @@
       "block_order": [
         "16560726087dbdbbc5-0"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",

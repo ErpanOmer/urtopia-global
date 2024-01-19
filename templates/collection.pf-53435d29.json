@@ -2,7 +2,6 @@
   "sections": {
     "slideshow": {
       "type": "slideshow",
-      "disabled": true,
       "blocks": {
         "slide": {
           "type": "slide",
@@ -26,6 +25,7 @@
       "block_order": [
         "slide"
       ],
+      "disabled": true,
       "settings": {
         "layout": "full_bleed",
         "slide_height": "small",

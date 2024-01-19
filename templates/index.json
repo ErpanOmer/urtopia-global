@@ -20,7 +20,6 @@
     },
     "16566427160a843f2a": {
       "type": "image-text",
-      "disabled": true,
       "blocks": {
         "16566427167e5741b4-0": {
           "type": "list",
@@ -43,12 +42,12 @@
         "16566427167e5741b4-0",
         "6441cfd2-1e2d-4dea-a8f7-01bc0cf4f42a"
       ],
+      "disabled": true,
       "settings": {
       }
     },
     "1656642735c802b75a": {
       "type": "photoWall",
-      "disabled": true,
       "blocks": {
         "5f3550fd-1be7-4239-95a6-0b1f445d4f3f": {
           "type": "col",
@@ -101,12 +100,12 @@
         "08f296ca-928d-42da-9a12-b1734df4605e",
         "2bf92cc6-1993-4630-91ad-45d9b9d7cde1"
       ],
+      "disabled": true,
       "settings": {
       }
     },
     "1656643011d454e339": {
       "type": "media-review-list",
-      "disabled": true,
       "blocks": {
         "165664301155be9527-0": {
           "type": "review",
@@ -166,13 +165,13 @@
         "660de4c5-4a90-4419-b7b8-f4f33448dea0",
         "d1878f94-fef3-4336-88ff-4f463783404d"
       ],
+      "disabled": true,
       "settings": {
         "heading": ""
       }
     },
     "16566433175ceb388b": {
       "type": "comments-list",
-      "disabled": true,
       "blocks": {
         "1656643317bf5f1e5d-0": {
           "type": "list",
@@ -225,6 +224,7 @@
         "652586ef-f77e-465e-85ae-40af1618b178",
         "56eb5234-9031-463a-bdb8-b567cc284d43"
       ],
+      "disabled": true,
       "settings": {
         "heading": "What our customers say"
       }
