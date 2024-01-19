@@ -1,0 +1,171 @@
+{{ 'component-cart.css' | asset_url | stylesheet_tag }}
+{{ 'component-totals.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+{{ 'component-discounts.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width{% if cart == empty %} is-empty{% endif %}" id="main-cart-footer" data-id="{{ section.id }}">
+  <div>
+    <div class="cart__footer">
+      {%- if settings.show_cart_note -%}
+      <cart-note class="cart__note field">
+        <label for="Cart-note">{{ 'sections.cart.note' | t }}</label>
+        <textarea class="text-area field__input" name="note" form="cart" id="Cart-note"
+          placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
+      </cart-note>
+      {%- endif -%}
+
+      {% assign bikeQuantity = 0 %}
+      {% assign discountSavedPrice = 0 %}
+      {%- for item in cart.items -%}
+
+      {% if item.product.title contains "Carbon One"%}
+      {% assign isEbike = true %}
+      {%- assign bikeQuantity = bikeQuantity | plus:item.quantity -%}
+      {% endif %}
+      {%- assign discountSavedPrice = discountSavedPrice | plus:item.original_line_price | minus:item.final_line_price
+      -%}
+      {%- endfor -%}
+      <div class="cart__blocks">
+        {% for block in section.blocks %}
+        {%- case block.type -%}
+        {%- when '@app' -%}
+        {% render block %}
+        {%- when 'subtotal' -%}
+        <div class="js-contents" {{ block.shopify_attributes }}>
+          <!--diy notification-->
+          {% if isEbike == true %}
+          <div class="cart-notification__header-container">
+            {%- assign bikeSavedPrice = bikeQuantity| times:60000 -%}
+            {%- assign totalSaved = bikeSavedPrice | plus: discountSavedPrice-%}
+            <div class="notification-tips"><img
+                src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/cart-tipsicon.png?" />You saved
+              {{ totalSaved | money}}!</div>
+            <div class="notification-tips"><img
+                src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/cart-tipsicon.png?" />You are
+              eligible for free shipping!</div>
+            <div class="notification-tips"><img
+                src="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/cart-tipsicon.png?" />
+              Free Accessories applied!</div>
+          </div>
+          {% endif %}
+          <!---->
+          <!-- 600off-->
+          {% if bikeQuantity > 0 %}
+          <div style="text-decoration: line-through;font-size:22px;" class="cart-item__old-price price price--end">
+            {{ cart.total_price |plus: totalSaved | money_with_currency }}
+          </div>
+          {%-endif-%}
+          <!-- -->
+          <div class="totals">
+            <h2 class="totals__subtotal">{{ 'sections.cart.subtotal' | t }}:</h2>
+            <p class="totals__subtotal-value">{{ cart.total_price | money_with_currency }}</p>
+          </div>
+
+          <div>
+            {%- if cart.cart_level_discount_applications.size > 0 -%}
+            <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+              {%- for discount in cart.cart_level_discount_applications -%}
+              <li class="discounts__discount discounts__discount--position">
+                {%- render 'icon-discount' -%}
+                {{ discount.title }}
+                (-{{ discount.total_allocated_amount | money }})
+              </li>
+              {%- endfor -%}
+            </ul>
+            {%- endif -%}
+          </div>
+
+          {% if cart != empty %}
+
+          {% if isEbike == true %}
+          <small class="tax-note caption-large rte">
+            Free shipping
+          </small>
+          <small class="tax-note caption-large rte">
+            Taxes calculated at checkout
+          </small>
+          {% else %}
+          <small class="tax-note caption-large rte">
+            Taxes and shipping calculated at checkout
+          </small>
+          {% endif %}
+
+          {% endif %}
+        </div>
+        <klarna-placement data-key="credit-promotion-badge" data-locale="de-DE" data-purchase-amount="">
+        </klarna-placement>
+        {%- else -%}
+        <div class="cart__ctas" {{ block.shopify_attributes }}>
+          <noscript>
+            <button type="submit" class="cart__update-button button button--secondary" form="cart">
+              {{ 'sections.cart.update' | t }}
+            </button>
+          </noscript>
+
+          <button onclick="obApi('track', 'Checkout');" type="submit" id="checkout" class="cart__checkout-button button"
+            name="checkout" {% if cart==empty %} disabled{% endif %} form="cart">
+            {{ 'sections.cart.checkout' | t }}
+          </button>
+        </div>
+
+        {%- if additional_checkout_buttons -%}
+        <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+          {{ content_for_additional_checkout_buttons }}
+        </div>
+        {%- endif -%}
+        {%- endcase -%}
+        {% endfor %}
+
+        <div id="cart-errors"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  //Bing UET
+  document.querySelector('#checkout').addEventListener('click', function () {
+    window.uetq = window.uetq || []; window.uetq.push('event', 'begin_checkout', { "revenue_value": 1, "currency": "USD" });
+  })
+  //
+  document.addEventListener('DOMContentLoaded', function () {
+    function isIE() {
+      const ua = window.navigator.userAgent;
+      const msie = ua.indexOf('MSIE ');
+      const trident = ua.indexOf('Trident/');
+
+      return (msie > 0 || trident > 0);
+    }
+
+    if (!isIE()) return;
+    const cartSubmitInput = document.createElement('input');
+    cartSubmitInput.setAttribute('name', 'checkout');
+    cartSubmitInput.setAttribute('type', 'hidden');
+    document.querySelector('#cart').appendChild(cartSubmitInput);
+    document.querySelector('#checkout').addEventListener('click', function (event) {
+      document.querySelector('#cart').submit();
+    });
+  });
+</script>
+
+{% schema %}
+{
+"name": "t:sections.main-cart-footer.name",
+"class": "cart__footer-wrapper",
+"blocks": [
+{
+"type": "subtotal",
+"name": "t:sections.main-cart-footer.blocks.subtotal.name",
+"limit": 1
+},
+{
+"type": "buttons",
+"name": "t:sections.main-cart-footer.blocks.buttons.name",
+"limit": 1
+},
+{
+"type": "@app"
+}
+]
+}
+{% endschema %}
