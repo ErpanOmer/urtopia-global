@@ -488,11 +488,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     {{ "accessibility.skip_to_text" | t }}
   </a>
 
-  {%- if settings.cart_type == 'drawer' -%}
-  {%- render 'cart-drawer' -%}
-  {%- endif -%}
-
-  {% section 'announcement-bar' %}
   {% section 'header' %}
   <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
     {{ content_for_layout }}
@@ -574,9 +569,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 {% render 'spurit_dmr_theme_snippet' %}
 <!-- CRITEO START -->
-{% render 'criteo-tracking' %}
 <!-- CRITEO END -->
 </body>
-{% render 'dialog' %}
-{% render 'performance' %}
 </html>

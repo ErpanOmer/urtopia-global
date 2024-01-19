@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "shopify theme dev -s urtopia-gl.myshopify.com -t 164763304241 --port 7000",
+    "dev": "shopify theme dev -s urtopia-gl.myshopify.com -t 164763533617 --port 7000",
     "pull": "shopify theme pull -s urtopia-gl.myshopify.com --live",
     "backup": "node backup.js"
   },
