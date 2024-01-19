@@ -72,7 +72,6 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
     <div class="product-grid">
         {% assign product = all_products["carbon-1-pro-reservation"] %}
         {% assign product_variants = product.variants | where: "available" %}
-        {% assign product_reviews_count = 0 %}
         {% render 'product-card-2',
             product_variants: product_variants,
             product_variant_options_find_sort: "M,L,S",
@@ -86,7 +85,6 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
         {% assign product = all_products["urtopia-carbon-e-bike"] %}
         {% assign product_variants = product.variants | where: "option1", "Carbon 1s · 350W · Shimano 7-Speed" | where: "available" %}
         {% assign product_tags = settings.carbon_ebike_free_accessories_count | append: ' Freebies'   %}
-        {% assign product_reviews_count = 312 %}
         {% render 'product-card-2',
             product_variants: product_variants,
             product_variant_options_find_sort: "M,L,S",
@@ -101,22 +99,18 @@ If you plan to remove PageFly, please see the guide in our help center first: ht
         <div class="gray-background-color u30DemiBold_v2 lozad mobileHide" data-background-image="https://cdn.shopify.com/s/files/1/0583/5810/4213/files/Group_22830_2x_8c178fff-ea2f-4b60-99c8-a44937213f1f.jpg?v=1695625131">Casual Comfortable Elegant</div> {% endcomment %}
         {% assign product = all_products["urtopia-chord-ebike"] %}
         {% assign product_variants = product.variants | where: "option1", "High-Step" | where: "available" %}
-        {% assign product_reviews_count = 112 %}
         {% render 'product-card-2',
             product_variants: product_variants,
             product_name: 'Chord',
             product_description: 'Elegantly zip around town for meet-ups, errands, or Sunday fun.',
-            product_discount_price: settings.chord_ebike_discount_price,
             product_reviews_count: product_reviews_count,
             product_url: product.url,
         %}
         {% assign product_variants = product.variants | where: "option1", "Step-Through" | where: "available" %}
-        {% assign product_reviews_count = 125 %}
         {% render 'product-card-2',
             product_variants: product_variants,
             product_name: 'Chord X',
             product_description: 'Easily kickstart your ride for workouts, city cruising, and pure enjoyment.',
-            product_discount_price: settings.chord_ebike_discount_price,
             product_reviews_count: product_reviews_count,
             product_url: product.url,
         %}
@@ -752,7 +746,7 @@ const parameters = [
   <div class="info">
 	  <h1>Test Ride</h1>
 	  <div class="u20Light">Experience the perfect ride – try it and you'll know!</div>
-	  <a class="my-button" href="https://newurtopia.com/pages/test-ride">Book now</a>
+	  <a class="my-button" href="/pages/test-ride">Book now</a>
   </div>
 </div>
 
@@ -850,19 +844,19 @@ const parameters = [
         const variant_image = target.attr('data-img')
 
         // outlet 车型
-        if (discount_price === 0) {
-            product_card.find('.product_price .u20DemiBold_v2').text(getPriceFormat(price, true)).attr('data-price', getPriceFormat(compare_at_price, true))
-            product_card.find('.tags > span:first-child').text(`${getPriceFormat(compare_at_price - price, true)} OFF`)
+        // if (discount_price === 0) {
+        //     product_card.find('.product_price .u20DemiBold_v2').text(getPriceFormat(price, true)).attr('data-price', getPriceFormat(compare_at_price, true))
+        //     product_card.find('.tags > span:first-child').text(`${getPriceFormat(compare_at_price - price, true)} OFF`)
 
-            if (price === compare_at_price) {
-                product_card.find('.product_price .u20DemiBold_v2').attr('data-price', '')
-                product_card.find('.tags > span:first-child').hide()
-            }
-        } else {
-            product_card.find('.product_price .u20DemiBold_v2').text(getPriceFormat(price - discount_price, true)).attr('data-price', getPriceFormat(price, true))
-            product_card.find('.product_price .u14Light_v2 > span').text(getPriceFormat((price - discount_price) / 24))
-            product_card.find('.tags > span:first-child').text(`${getPriceFormat(discount_price, true)} OFF`)
-        }
+        //     if (price === compare_at_price) {
+        //         product_card.find('.product_price .u20DemiBold_v2').attr('data-price', '')
+        //         product_card.find('.tags > span:first-child').hide()
+        //     }
+        // } else {
+        //     product_card.find('.product_price .u20DemiBold_v2').text(getPriceFormat(price - discount_price, true)).attr('data-price', getPriceFormat(price, true))
+        //     product_card.find('.product_price .u14Light_v2 > span').text(getPriceFormat((price - discount_price) / 24))
+        //     product_card.find('.tags > span:first-child').text(`${getPriceFormat(discount_price, true)} OFF`)
+        // }
 
         product_card.find('.variant-image').attr('src', variant_image)
         product_card.find('.my-button').attr('href', `${product_card.find('.my-button').attr('href').split('?').shift()}?variant=${variant_id}`)

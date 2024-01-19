@@ -448,16 +448,16 @@ $product-tags-color: #FFE2D9;
         .u20DemiBold_v2 {
             margin-right: 5%;
 
-            &[data-price]::after {
-                content: attr(data-price);
-                display: inline-block;
-                color: #161c1f;
-                text-decoration: line-through;
-                margin-left: 6px;
-                font-size: 20px;
-                font-weight: 300;
-                opacity: 0.53;
-            }
+            // &[data-price]::after {
+            //     content: attr(data-price);
+            //     display: inline-block;
+            //     color: #161c1f;
+            //     text-decoration: line-through;
+            //     margin-left: 6px;
+            //     font-size: 20px;
+            //     font-weight: 300;
+            //     opacity: 0.53;
+            // }
         }
 
         &>.u14Light_v2 {
